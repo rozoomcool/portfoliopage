@@ -1,0 +1,43 @@
+@import '../../styles/variables';
+
+.experienceLine {
+    width: 100%;
+    display: block;
+    margin-top: 78px;
+    margin-bottom: 56px;
+}
+
+.experienceLineCard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+    max-width: $contentWidthLg;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @media (max-width: 768px) {
+        justify-items: start;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.experienceBlock {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.valueText {
+    font-size: 2.6em;
+    font-weight: 800;
+    margin-right: 8px;
+}
+
+.titleText {
+    color: $textHintColor;
+    font-size: 0.8em;
+}

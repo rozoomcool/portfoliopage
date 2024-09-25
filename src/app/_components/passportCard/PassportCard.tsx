@@ -1,5 +1,6 @@
 import styles from "./PassportCard.module.scss"
 import Image from "next/image"
+import avatar from "../../public/assets/mephoto.jpeg"
 
 export default function PassportCard() {
     return (
@@ -25,12 +26,12 @@ export default function PassportCard() {
                         </div>
                     </div>
                     <div className={`${styles.passportImage}`}>
-                        <img
+                        <Image
                         className={styles.shape}
-                            src={"https://imagedelivery.net/lCsODh8EJUNDijZLbbcSWQ/c2c0702c-29f9-4045-5fd1-3afd007ff200/public"}
+                            src={avatar}
                             alt={""}
-                            // width="350px"
-                            // height="350px"
+                            // width={350}
+                            // height={350}
                         />
                     </div>
                 </div>
