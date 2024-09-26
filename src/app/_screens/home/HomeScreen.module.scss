@@ -1,8 +1,27 @@
 @import '../../styles/variables';
 
+.container {
+    @media (min-width: $contentWidthMd) {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        scroll-behavior: smooth;
+    }
+}
+
+/* Каждый блок */
+.section {
+    @media (min-width: $contentWidthMd) {
+        scroll-snap-align: start;
+        height: 100vh;
+    }
+
+}
+
 .main {
     width: 100%;
     height: calc(100vh - $headerHeight);
+
     @media (max-width: $contentWidthMd) {
         height: auto;
     }
@@ -12,6 +31,7 @@
     width: 100%;
     height: 70%;
     align-content: center;
+
     @media (max-width: $contentWidthMd) {
         height: auto;
     }
@@ -21,6 +41,7 @@
     width: 100%;
     height: 30%;
     align-content: center;
+
     @media (max-width: $contentWidthMd) {
         height: auto;
     }
