@@ -2,7 +2,7 @@
 
 .header {
     width: 100%;
-    height: 56px;
+    height: $headerHeight;
     background-color: $surfaceColor;
     align-content: center;
 }
@@ -15,7 +15,7 @@
     color: white;
     cursor: pointer;
 
-    @media (min-width: 768px) {
+    @media (min-width: $contentWidthMd) {
         display: none;
     }
 }
@@ -111,7 +111,7 @@
     display: flex;
     list-style-type: none;
 
-    @media (max-width: 768px) {
+    @media (max-width: $contentWidthMd) {
         display: none;
     }
 }
