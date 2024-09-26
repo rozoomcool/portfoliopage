@@ -11,7 +11,7 @@ export default function Home() {
         { title: "Years of experience", value: "2" },
         { title: "Projects completed", value: "16" },
         { title: "Technologies mastered", value: "7" },
-        { title: "Code commits", value: "251" }
+        { title: "I don't know", value: "500" }
       ]}></ExperienceLine>
     </>
   );
