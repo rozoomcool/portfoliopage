@@ -1,0 +1,66 @@
+@import '../../styles/variables';
+
+.container {
+    width: 100%;
+    height: 100vh;
+    // padding-top: $headerHeight;
+    align-content: center;
+
+    @media (max-width: $contentWidthMd) {
+        height: auto;
+    }
+}
+
+.section {
+    max-width: $contentWidthLg;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sectionTitle {
+    font-weight: 800;
+    font-size: 2em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.skillsSection {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(4, auto);
+    width: 100%;
+    gap: 36px;
+    justify-content: center;
+    justify-items: center;
+    grid-auto-flow: row;
+    align-items: center;
+}
+
+.skillsCard {
+    padding: 16px;
+    width: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darken($surfaceColor, 1%);
+    border-radius: 12px;
+    filter: drop-shadow(0 0 5px rgb(42, 42, 42));
+
+    &:hover {
+        filter: drop-shadow(0 0 5px $primaryColor);
+    }
+
+    transition: 0.5s ease;
+}
+
+.cardText {
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 16px;
+    font-weight: 500;
+
+}

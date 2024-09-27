@@ -2,13 +2,14 @@ import ExperienceLine from "@/app/_components/experienceLine/ExperienceLine";
 import PassportCard from "@/app/_components/passportCard/PassportCard";
 import styles from "./HomeScreen.module.scss";
 import Header from "@/app/_components/header/Header";
+import SkillsCard from "@/app/_components/sckillsCard/SkillsCard";
 
 export default function HomeScreen() {
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.section}>
-                <Header></Header>
+                    <Header></Header>
                     <div className={styles.main}>
                         <div className={styles.mainPassportCard}>
                             <PassportCard />
@@ -24,19 +25,8 @@ export default function HomeScreen() {
                     </div>
                 </div>
                 <div className={styles.section}>
-
                     <div className={styles.main}>
-                        <div className={styles.mainPassportCard}>
-                            <PassportCard />
-                        </div>
-                        <div className={styles.mainExpLine}>
-                            <ExperienceLine data={[
-                                { title: "Years of experience", value: "2" },
-                                { title: "Projects completed", value: "16" },
-                                { title: "Technologies mastered", value: "7" },
-                                { title: "I don't know", value: "500" }
-                            ]} />
-                        </div>
+                        <SkillsCard></SkillsCard>
                     </div>
                 </div>
             </div>

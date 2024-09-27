@@ -15,12 +15,12 @@
         scroll-snap-align: start;
         height: 100vh;
     }
-
 }
 
 .main {
     width: 100%;
-    height: calc(100vh - $headerHeight);
+    height: 100vh;
+    padding-top: $navInsetsTop;
 
     @media (max-width: $contentWidthMd) {
         height: auto;

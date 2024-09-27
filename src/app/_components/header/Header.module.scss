@@ -6,6 +6,11 @@
     height: $headerHeight;
     background-color: $surfaceColor;
     align-content: center;
+    position: fixed;
+    z-index: 5;
+    @media (max-width: $contentWidthMd) {
+        padding-top: 0px;
+    }
 }
 
 .menuButton {
