@@ -19,10 +19,10 @@ export default function Header() {
                     <div>
                         <ul className={styles.navList}>
                             <li className={`${styles.navListItem} ${styles.activeNavListItem}`}>Home</li>
-                            <li className={styles.navListItem}>Projects</li>
+                            <li className={styles.navListItem}>Skills</li>
                             <li className={styles.navListItem}>Resume</li>
-                            <li className={styles.navListItem}>Contacts</li>
-                            <li className={styles.navListItem}>About</li>
+                            <li className={styles.navListItem}>Projects</li>
+                            <li className={styles.navListItem}>Contact</li>
                         </ul>
                     </div>
                     <button className={styles.menuButton} onClick={toggleDrawer}>
