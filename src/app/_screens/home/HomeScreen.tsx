@@ -3,6 +3,7 @@ import PassportCard from "@/app/_components/passportCard/PassportCard";
 import styles from "./HomeScreen.module.scss";
 import Header from "@/app/_components/header/Header";
 import SkillsCard from "@/app/_components/sckillsCard/SkillsCard";
+import ResumeCard from "@/app/_components/resumeCard/ResumeCard";
 
 export default function HomeScreen() {
     return (
@@ -27,6 +28,11 @@ export default function HomeScreen() {
                 <div className={styles.section}>
                     <div className={styles.main}>
                         <SkillsCard></SkillsCard>
+                    </div>
+                </div>
+                <div className={styles.section}>
+                    <div className={styles.main}>
+                        <ResumeCard/>
                     </div>
                 </div>
             </div>

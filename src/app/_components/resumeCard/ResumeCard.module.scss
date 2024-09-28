@@ -1,0 +1,73 @@
+@import '../../styles/variables';
+
+.container {
+    width: 100%;
+    height: 100vh;
+    // align-content: center;
+    padding-top: $headerHeight + $navInsetsTop;
+}
+
+.resumeCard {
+    display: flex;
+    width: $contentWidthLg;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navSection {
+    width: 30%;
+    padding-right: 24px;
+}
+
+.contentSection {
+    padding-left: 24px;
+}
+
+.navSectionTitle {
+    height: 42px;
+    font-size: 1.9em;
+    margin-bottom: 12px;
+}
+
+.navButtonContainer {
+    width: 100%;
+    height: 46px;
+    background-color: darken($surfaceColor, 1%);
+    border-radius: 12px;
+    align-content: center;
+    padding: 12px;
+    margin-bottom: 4px;
+    transition: 0.3s ease-in;
+
+    &:hover {
+        background-color: $primaryColor;
+    }
+}
+
+.navButtonContainerSelected {
+    background-color: $primaryColor;
+    color: $surfaceColor;
+}
+
+
+.contentSectionTitle {
+    height: 42px;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+}
+
+.navSectionDescription {
+    color: $textHintColor;
+    height: 72px;
+    align-content: center;
+    font-size: 0.8em;
+    margin-bottom: 12px;
+}
+
+.contentCardSection {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(2, auto);
+    // grid-template-rows: repeat(2, auto);
+}

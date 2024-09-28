@@ -38,19 +38,20 @@
     align-items: center;
 
     @media (max-width: $contentWidthMd) {
-        grid-template-columns: repeat(auto, auto);
-        grid-template-rows: repeat(2, auto);
-        overflow-x: scroll;
-        justify-content: start;
-        justify-items: start;
-        align-items: start;
-        padding: 36px;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(auto, auto);
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin-top: 24px;
+        // padding: 4px;
+        gap: 8px;
     }
 }
 
 .skillsCard {
     padding: 16px;
-    width: 128px;
+    width: 118px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,6 +65,10 @@
     }
 
     transition: 0.5s ease;
+
+    @media (max-width: $contentWidthMd) {
+        width: 98px;
+    }
 }
 
 .cardText {
@@ -71,5 +76,13 @@
     text-align: center;
     margin-top: 16px;
     font-weight: 500;
+    @media (max-width: $contentWidthMd) {
+    }
+}
 
+.skillsCard img {
+    @media (max-width: $contentWidthMd) {
+        width: 42px;
+        height: 42px;
+    }
 }

@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.experienceCard {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: darken($surfaceColor, 1%);
+}
+
+.experienceCardTerm {
+    color: $primaryColor;
+    font-size: 0.8em;
+    height: 16px;
+}
+
+.experienceCardTitle {
+    font-size: 1.3em;
+    height: 72px;
+}
+
+.experienceCardPlace {
+    height: 24px;
+    font-size: 1em;
+    color: $textHintColor;
+}
