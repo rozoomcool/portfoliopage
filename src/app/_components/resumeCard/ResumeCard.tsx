@@ -28,7 +28,7 @@ export default function ResumeCard() {
 
                         <div className={styles.contentCardSection}>
                             <ExperienceCard title={"Java Developer"} term={"2021 - 2022"} place={"Yandex"} />
-                            <ExperienceCard title={"Java Developer"} term={"2021 - 2022"} place={"Yandex"} />
+                            <ExperienceCard title={"Middle mobile developer"} term={"2022"} place={"Delivety Club"} />
                             <ExperienceCard title={"Java Developer"} term={"2021 - 2022"} place={"Yandex"} />
                             <ExperienceCard title={"Java Developer"} term={"2021 - 2022"} place={"Yandex"} />
                         </div>

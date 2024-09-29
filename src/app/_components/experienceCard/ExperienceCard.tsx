@@ -12,7 +12,10 @@ export default function ExperienceCard({...params}: ExperienceCardParams) {
             <div className={styles.experienceCard}>
                 <p className={styles.experienceCardTerm}>{params.term}</p>
                 <p className={styles.experienceCardTitle}>{params.title}</p>
-                <p className={styles.experienceCardPlace}>{params.place}</p>
+                <div className={styles.placeContainer}>
+                    <span className={styles.placeDot}></span>
+                    <p className={styles.experienceCardPlace}>{params.place}</p>
+                </div>
             </div>
         </>
     );
