@@ -20,6 +20,7 @@
 }
 
 .contentSection {
+    width: 70%;
     padding-left: 24px;
 }
 
@@ -36,7 +37,7 @@
     border-radius: 12px;
     align-content: center;
     padding: 12px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     transition: 0.3s ease-in;
 
     &:hover {
@@ -48,7 +49,6 @@
     background-color: $primaryColor;
     color: $surfaceColor;
 }
-
 
 .contentSectionTitle {
     height: 42px;
@@ -66,8 +66,10 @@
 
 .contentCardSection {
     display: grid;
+    max-height: calc(166px * 2 + 20px);
+    overflow-y: scroll;
     width: 100%;
     gap: 20px;
     grid-template-columns: 1fr 1fr;
-    // grid-template-rows: repeat(2, auto);
+    grid-template-rows: 1fr 1fr;
 }

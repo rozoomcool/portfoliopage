@@ -6,7 +6,7 @@ type ExperienceCardParams = {
     place: string;
 }
 
-export default function ExperienceCard({...params}: ExperienceCardParams) {
+export default function ExperienceCard({ ...params }: ExperienceCardParams) {
     return (
         <>
             <div className={styles.experienceCard}>
