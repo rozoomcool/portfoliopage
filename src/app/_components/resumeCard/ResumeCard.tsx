@@ -1,18 +1,32 @@
 "use client"
 
-import { ExperienceRequest } from "@/app/api/experience/route";
+import { ExperienceRequest, ExperienceResponse } from "@/app/api/experience/route";
 import ExperienceCard from "../experienceCard/ExperienceCard";
 import styles from "./ResumeCard.module.scss";
 import { useEffect, useState } from "react";
-import { EducationRequest } from "@/app/api/education/route";
+import { EducationRequest, EducationResponse } from "@/app/api/education/route";
 import { $api } from "@/app/_config/api";
+import AboutMeSection from "../aboutMeSection/AboutMeSection";
+import { AboutMe } from "@prisma/client";
 
 const navs = ["Experience", "Education", "Skills", "About me"];
 
 export default function ResumeCard() {
 
-    const [experiences, setExperiences] = useState<ExperienceRequest[]>([]);
-    const [educations, setEducations] = useState<EducationRequest[]>([]);
+    const [experiences, setExperiences] = useState<ExperienceResponse[]>([]);
+    const [educations, setEducations] = useState<EducationResponse[]>([]);
+    const [aboutMe, setAboutMe] = useState<AboutMe>({
+        id: 0,
+        name: "",
+        experience: "",
+        nationality: "",
+        freelance: "",
+        phone: "",
+        telegram: "",
+        email: "",
+        languages: ""
+
+    });
     const [navigation, setNavigation] = useState(navs[0]);
 
     useEffect(() => {
@@ -22,14 +36,19 @@ export default function ResumeCard() {
     const initData = async () => {
         setExperiences(await fetchExperience());
         setEducations(await fetchEducation());
+        setAboutMe(await fetchAboutMe());
     }
 
     const fetchExperience = async () => {
-        return (await $api.get<ExperienceRequest[]>("/experience")).data;
+        return (await $api.get<ExperienceResponse[]>("/experience")).data;
     }
 
     const fetchEducation = async () => {
-        return (await $api.get<EducationRequest[]>("/education")).data;
+        return (await $api.get<EducationResponse[]>("/education")).data;
+    }
+
+    const fetchAboutMe = async () => {
+        return (await $api.get<AboutMe>("/aboutme")).data;
     }
 
     const experienceSection = () => {
@@ -37,7 +56,7 @@ export default function ResumeCard() {
             <>
                 <div className={styles.contentCardSection}>
                     {experiences.map((exp) =>
-                        <ExperienceCard title={exp.title} term={exp.term} place={exp.company} />
+                        <ExperienceCard key={exp.id} title={exp.title} term={exp.term} place={exp.company} />
                     )}
                 </div>
             </>
@@ -49,9 +68,19 @@ export default function ResumeCard() {
             <>
                 <div className={styles.contentCardSection}>
                     {educations.map((edu) =>
-                        <ExperienceCard title={edu.title} term={edu.term} place={edu.subject} />
+                        <ExperienceCard key={edu.id} title={edu.title} term={edu.term} place={edu.subject} />
                     )}
                 </div>
+            </>
+        );
+    }
+
+    const aboutMeSection = () => {
+        return (
+            <>
+                {/* <div className={styles.contentCardSection}> */}
+                    <AboutMeSection name={aboutMe.name} experience={aboutMe.experience} nationality={aboutMe.nationality} freelance={aboutMe.freelance} phone={aboutMe.phone} telegram={aboutMe.telegram} email={aboutMe.email} languages={aboutMe.languages} />
+                {/* </div> */}
             </>
         );
     }
@@ -64,7 +93,7 @@ export default function ResumeCard() {
         } else if (navigation == "Skills") {
             return educationSection();
         } else if (navigation == "About me") {
-            return educationSection();
+            return aboutMeSection();
         } else {
             return experienceSection();
         }

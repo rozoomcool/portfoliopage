@@ -10,17 +10,32 @@ export interface ExperienceRequest {
     term: string;
 }
 
+export interface ExperienceResponse {
+    id: number;
+    title: string;
+    company: string;
+    term: string;
+}
+
 export async function POST(req: NextRequest) {
-    const {title, company, term}: ExperienceRequest = await req.json();
+    try {
+        const { title, company, term }: ExperienceRequest = await req.json();
 
-    const data = await prisma.experience.create({
-        data: { title, company, term}
-    })
+        const data = await prisma.experience.create({
+            data: { title, company, term }
+        })
 
-    return NextResponse.json(data);
+        return NextResponse.json(data);
+    } catch (e) {
+        return NextResponse.json({ error: e })
+    }
 }
 
 export async function GET(req: Request) {
-    const users = await prisma.experience.findMany();
-    return NextResponse.json(users);
+    try {
+        const users = await prisma.experience.findMany();
+        return NextResponse.json(users);
+    } catch (e) {
+        return NextResponse.json({ error: e })
+    }
 }

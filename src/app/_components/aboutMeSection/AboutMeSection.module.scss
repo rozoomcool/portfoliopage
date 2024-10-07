@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.tableContainer {
+    display: flex;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 48px;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: $contentWidthMd) {
+        display: block;
+    }
+}
+
+.tableSection {
+    width: 100%;
+}
+
+.param {
+    display: flex;
+    width: 100%;
+    margin-bottom: 24px;
+    align-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.hintParam {
+    font-size: 0.7em;
+    color: $textHintColor;
+    margin-right: 12px;
+}

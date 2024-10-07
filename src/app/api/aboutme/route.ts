@@ -4,25 +4,23 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const prisma = new PrismaClient();
 
-export interface EducationRequest {
-    title: string;
-    subject: string;
-    term: string;
-}
-
-export interface EducationResponse {
-    id: number;
-    title: string;
-    subject: string;
-    term: string;
+interface AboutMeRequest {
+    name: string;
+    experience: string;
+    nationality: string;
+    freelance: string;
+    phone: string;
+    telegram: string;
+    email: string;
+    languages: string;
 }
 
 export async function POST(req: NextRequest) {
     try {
-        const { title, subject, term }: EducationRequest = await req.json();
+        const request: AboutMeRequest = await req.json();
 
-        const data = await prisma.education.create({
-            data: { title, subject, term }
+        const data = await prisma.aboutMe.create({
+            data: { ...request }
         })
         return NextResponse.json(data);
     } catch (e) {
@@ -32,8 +30,8 @@ export async function POST(req: NextRequest) {
 
 export async function GET(req: Request) {
     try {
-        const users = await prisma.education.findMany();
-        return NextResponse.json(users);
+        const info = (await prisma.aboutMe.findMany());
+        return NextResponse.json(info[info.length - 1]);
     } catch (e) {
         return NextResponse.json({ error: e })
     }
