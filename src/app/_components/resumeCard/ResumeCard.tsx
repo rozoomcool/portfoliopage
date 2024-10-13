@@ -9,7 +9,7 @@ import { $api } from "@/app/_config/api";
 import AboutMeSection from "../aboutMeSection/AboutMeSection";
 import { AboutMe } from "@prisma/client";
 
-const navs = ["Experience", "Education", "Skills", "About me"];
+const navs = ["Experience", "Education", "About me", "Info"];
 
 export default function ResumeCard() {
 
@@ -75,6 +75,17 @@ export default function ResumeCard() {
         );
     }
 
+    const infoSection = () => {
+        return (
+            <>
+                {/* <div className={styles.contentCardSection}> */}
+                <p className={styles.infoText}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nam, eligendi reiciendis ullam ut molestiae deserunt. Necessitatibus voluptate deleniti eveniet reiciendis cum nulla doloribus consectetur. Qui blanditiis enim aliquid quos facere sit sequi, culpa perspiciatis quis veniam nam autem ullam neque dolor doloribus numquam minima totam eveniet nobis eum. Commodi?</p>
+                <p className={styles.infoText}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nam, eligendi reiciendis ullam ut molestiae deserunt. Necessitatibus voluptate deleniti eveniet reiciendis cum nulla doloribus consectetur. Qui blanditiis enim aliquid quos facere sit sequi, culpa perspiciatis quis veniam nam autem ullam neque dolor doloribus numquam minima totam eveniet nobis eum. Commodi?</p>
+                {/* </div> */}
+            </>
+        );
+    }
+
     const aboutMeSection = () => {
         return (
             <>
@@ -90,8 +101,8 @@ export default function ResumeCard() {
             return experienceSection();
         } else if (navigation == "Education") {
             return educationSection();
-        } else if (navigation == "Skills") {
-            return educationSection();
+        } else if (navigation == "Info") {
+            return infoSection();
         } else if (navigation == "About me") {
             return aboutMeSection();
         } else {
