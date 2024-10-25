@@ -4,6 +4,7 @@ import styles from "./HomeScreen.module.scss";
 import Header from "@/app/_components/header/Header";
 import SkillsCard from "@/app/_components/sckillsCard/SkillsCard";
 import ResumeCard from "@/app/_components/resumeCard/ResumeCard";
+import ProjectsSection from "@/app/_components/projectsSection/ProjectsSection";
 
 export default function HomeScreen() {
     return (
@@ -33,6 +34,11 @@ export default function HomeScreen() {
                 <div className={styles.section}>
                     <div className={styles.main}>
                         <ResumeCard/>
+                    </div>
+                </div>
+                <div className={styles.section}>
+                    <div className={styles.main}>
+                        <ProjectsSection/>
                     </div>
                 </div>
             </div>
