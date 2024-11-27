@@ -15,6 +15,9 @@ import ubuntu from "../../public/assets/ubuntu.svg";
 import redis from "../../public/assets/redis.svg";
 import nginx from "../../public/assets/nginx.svg";
 import mongodb from "../../public/assets/mongodb.svg";
+import nestjs from "../../public/assets/nestjs.svg";
+import ts from "../../public/assets/ts.svg";
+import rabbimq from "../../public/assets/rabbitmq.svg";
 
 
 type SkillCardContent = {
@@ -24,12 +27,14 @@ type SkillCardContent = {
 
 const skills: SkillCardContent[] = [
     { image: flutter, title: "Flutter" },
-    { image: spring, title: "Spring" },
-    { image: react, title: "ReactJS" },
+    // { image: spring, title: "Spring" },
     { image: nodejs, title: "NodeJS" },
-    { image: java, title: "Java" },
-    { image: js, title: "Javascript" },
-    { image: kotlin, title: "Kotlin" },
+    { image: nestjs, title: "NestJS" },
+    { image: react, title: "ReactJS" },
+    // { image: java, title: "Java" },
+    { image: js, title: "JavaScript" },
+    { image: ts, title: "TypeScript" },
+    // { image: kotlin, title: "Kotlin" },
     { image: python, title: "Python" },
     { image: docker, title: "Docker" },
     { image: nginx, title: "Nginx" },
@@ -37,6 +42,7 @@ const skills: SkillCardContent[] = [
     { image: redis, title: "Redis" },
     { image: postgres, title: "PostgreSQL" },
     { image: mongodb, title: "MongoDB" },
+    { image: rabbimq, title: "RabbitMQ" },
     { image: git, title: "GIT" },
 ]
 

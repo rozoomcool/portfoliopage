@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Header.module.scss"
+import DownloadCVButton from "../downloadCVButton/DownloadCVButton";
 
 export default function Header() {
 
@@ -18,11 +19,14 @@ export default function Header() {
                     </div>
                     <div>
                         <ul className={styles.navList}>
-                            <li className={`${styles.navListItem} ${styles.activeNavListItem}`}>Home</li>
+                            {/* <li className={`${styles.navListItem} ${styles.activeNavListItem}`}>Home</li>
                             <li className={styles.navListItem}>Skills</li>
                             <li className={styles.navListItem}>Resume</li>
                             <li className={styles.navListItem}>Projects</li>
-                            <li className={styles.navListItem}>Contact</li>
+                            <li className={styles.navListItem}>Contact</li> */}
+                            <div className={styles.navButtonDiv}>
+                                <DownloadCVButton />
+                            </div>
                         </ul>
                     </div>
                     <button className={styles.menuButton} onClick={toggleDrawer}>
