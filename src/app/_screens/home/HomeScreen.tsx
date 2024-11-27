@@ -36,11 +36,11 @@ export default function HomeScreen() {
                         <ResumeCard/>
                     </div>
                 </div>
-                <div className={styles.section}>
+                {/* <div className={styles.section}>
                     <div className={styles.main}>
                         <ProjectsSection/>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );
