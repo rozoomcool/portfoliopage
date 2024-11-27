@@ -2,7 +2,7 @@
 
 .header {
     width: 100%;
-    padding-top: $navInsetsTop;
+    // padding-top: $navInsetsTop;
     height: $headerHeight;
     background-color: $surfaceColor;
     align-content: center;
@@ -87,7 +87,7 @@
     width: 100%;
     margin-right: 12px;
     margin-left: 12px;
-    margin-top: 12px;
+    // margin-top: 12px;
     display: flex;
     justify-content: space-between;
 }
