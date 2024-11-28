@@ -34,9 +34,15 @@ export default function ResumeCard() {
     }, [])
 
     const initData = async () => {
-        setExperiences(await fetchExperience());
-        setEducations(await fetchEducation());
-        setAboutMe(await fetchAboutMe());
+        try {
+            setExperiences(await fetchExperience());
+        } catch (e) { }
+        try {
+            setEducations(await fetchEducation());
+        } catch (e) { }
+        try {
+            setAboutMe(await fetchAboutMe());
+        } catch (e) { }
     }
 
     const fetchExperience = async () => {
@@ -44,7 +50,6 @@ export default function ResumeCard() {
     }
 
     const fetchEducation = async () => {
-        console.log(`:::::: ${$api}`)
         return (await $api.get<EducationResponse[]>("/education")).data;
     }
 
@@ -91,7 +96,7 @@ export default function ResumeCard() {
         return (
             <>
                 {/* <div className={styles.contentCardSection}> */}
-                    <AboutMeSection name={aboutMe.name} experience={aboutMe.experience} nationality={aboutMe.nationality} freelance={aboutMe.freelance} phone={aboutMe.phone} telegram={aboutMe.telegram} email={aboutMe.email} languages={aboutMe.languages} />
+                <AboutMeSection name={aboutMe.name} experience={aboutMe.experience} nationality={aboutMe.nationality} freelance={aboutMe.freelance} phone={aboutMe.phone} telegram={aboutMe.telegram} email={aboutMe.email} languages={aboutMe.languages} />
                 {/* </div> */}
             </>
         );
