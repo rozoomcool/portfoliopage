@@ -44,6 +44,7 @@ export default function ResumeCard() {
     }
 
     const fetchEducation = async () => {
+        console.log(`:::::: ${$api}`)
         return (await $api.get<EducationResponse[]>("/education")).data;
     }
 

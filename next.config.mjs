@@ -1,5 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  future: {
+    webpack5: true,
+  },
+  webpack(config) {
+    config.resolve.fallback = {
+
+      // if you miss it, all the other options in fallback, specified
+      // by next.js will be dropped.
+      ...config.resolve.fallback,
+
+      fs: false, // the solution
+    };
+
+    return config;
+  },
   async headers() {
     return [
       {
@@ -13,7 +28,7 @@ const nextConfig = {
         ]
       }
     ]
-  }
+  },
 };
 
 import path from "path";
@@ -28,5 +43,6 @@ export const opt = {
     includePaths: [path.join(__dirname, 'styles')],
   },
 };
+
 
 export default nextConfig;
