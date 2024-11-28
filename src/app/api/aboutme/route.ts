@@ -34,6 +34,6 @@ export async function GET(req: Request) {
         return NextResponse.json(info[info.length - 1]);
     } catch (e) {
         console.log({ error: e })
-        return NextResponse.json([]);
+        return NextResponse.json([{ "id": 1, "name": "Umatkereev Rosul", "experience": "3+ Years", "nationality": "Chechen", "freelance": "Availabel", "phone": "+7 928 021 4779", "telegram": "@govzcode", "email": "rosul.um@gmail.com", "languages": "English Chechen Russian" }]);
     }
 }

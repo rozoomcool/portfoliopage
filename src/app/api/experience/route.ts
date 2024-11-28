@@ -37,6 +37,6 @@ export async function GET(req: Request) {
         return NextResponse.json(users);
     } catch (e) {
         console.log({ error: e });
-        return NextResponse.json([]);
+        return NextResponse.json([{ "id": 1, "title": "Telegram bot developer", "company": "Frilance, Project work", "term": "2021 - to date" }, { "id": 2, "title": "Fullstack Developer", "company": "Frilance, Project work", "term": "2020 - to date" }, { "id": 3, "title": "Flutter Developer", "company": "Frilance, Project work", "term": "2022 - to date" }]);
     }
 }

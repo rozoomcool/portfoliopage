@@ -36,6 +36,6 @@ export async function GET(req: Request) {
         return NextResponse.json(users);
     } catch (e) {
         console.log({ error: e });
-        return NextResponse.json([]);
+        return NextResponse.json([{ "id": 1, "title": "Chechen State University", "subject": "Software Engineering", "term": "2021-2026" }, { "id": 7, "title": "Self-education, Computer courses", "subject": "Programming, Design, 3D", "term": "2016 - today" }]);
     }
 }
