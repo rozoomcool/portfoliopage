@@ -1,6 +1,6 @@
 import styles from "./PassportCard.module.scss"
 import Image from "next/image"
-import avatar from "../../public/assets/mephoto2.jpeg"
+import avatar from "../../public/assets/mephoto3.jpeg"
 import DownloadCVButton from "../downloadCVButton/DownloadCVButton";
 
 export default function PassportCard() {
@@ -23,8 +23,8 @@ export default function PassportCard() {
                         className={styles.shape}
                             src={avatar}
                             alt={""}
-                            // width={350}
-                            // height={350}
+                            width={380}
+                            height={380}
                         />
                     </div>
                 </div>

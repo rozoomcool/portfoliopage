@@ -1,5 +1,35 @@
 @import './styles/variables';
 
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+    z-index: 5;
+  }
+  // scrollbar-color: darken($primaryColor, 10%) darken($primaryColor, 30%);
+  // scrollbar-gutter: stable;
+  &::-webkit-scrollbar-thumb {
+    z-index: 5;
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    z-index: 5;
+    background: $background-color;
+  }
+
+  &::-webkit-scrollbar-corner {
+    border-radius: 20px;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+    // scrollbar-width: thin;
+  }
+}
 
 :root {
   --background: $surfaceColor;
@@ -28,14 +58,25 @@ body {
 }
 
 * {
+  // @include scrollbars(10px, darken($primaryColor, 10%), $primaryColor);
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  scrollbar-width: thin;
-  scrollbar-color: darken($primaryColor, 10%) darken($primaryColor, 30%);
-  scrollbar-gutter: stable;
+  // scrollbar-width: thin;
+  // scrollbar-color: darken($primaryColor, 10%) darken($primaryColor, 30%);
+  // scrollbar-gutter: stable;
+  // scrollbar-arrow-color: transparent;
+  // scroll-margin-block: 0;
+  // scroll-margin: 0;
+  // scroll-padding: 0;
 
   // border: 1px red solid;
+}
+
+::-webkit-scrollbar {
+  // color: darken($primaryColor, 10%) darken($primaryColor, 30%);
+  // scrollbar-width: thin;
+  display: none;
 }
 
 
