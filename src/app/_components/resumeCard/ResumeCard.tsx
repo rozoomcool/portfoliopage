@@ -85,8 +85,9 @@ export default function ResumeCard() {
         return (
             <>
                 {/* <div className={styles.contentCardSection}> */}
-                <p className={styles.infoText}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nam, eligendi reiciendis ullam ut molestiae deserunt. Necessitatibus voluptate deleniti eveniet reiciendis cum nulla doloribus consectetur. Qui blanditiis enim aliquid quos facere sit sequi, culpa perspiciatis quis veniam nam autem ullam neque dolor doloribus numquam minima totam eveniet nobis eum. Commodi?</p>
-                <p className={styles.infoText}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nam, eligendi reiciendis ullam ut molestiae deserunt. Necessitatibus voluptate deleniti eveniet reiciendis cum nulla doloribus consectetur. Qui blanditiis enim aliquid quos facere sit sequi, culpa perspiciatis quis veniam nam autem ullam neque dolor doloribus numquam minima totam eveniet nobis eum. Commodi?</p>
+                <p className={styles.infoText}>My name is Rosul and i am a skilled full-stack and mobile developer with over 5 years of experience in building scalable, high-performance solutions. A finalist in the ICPC and a frequent participant in hackathons, where I have consistently demonstrated exceptional problem-solving abilities. My expertise includes developing Telegram bots, RESTful APIs, and cross-platform mobile applications using Flutter and Dart.</p>
+                <p className={styles.infoText}>I work with modern technologies such as JavaScript, TypeScript, Python, NestJS, Node.js, Express.js, and use Docker and Nginx for containerization and deployment. I am proficient in database management with PostgreSQL, MongoDB, and Redis.</p>
+                <p className={styles.infoText}>As a freelancer, I’ve delivered innovative, reliable solutions for a range of clients, balancing functionality, performance, and development efficiency. I’m always eager to take on complex challenges, improve my skills, and contribute to dynamic teams that value creativity and results-driven work.</p>
                 {/* </div> */}
             </>
         );
