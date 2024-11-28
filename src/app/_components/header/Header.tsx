@@ -36,7 +36,7 @@ export default function Header() {
                     </button>
                 </nav>
 
-                <div className={isDrawerOpen ? styles.drawerOpened : styles.drawerClosed}>
+                {/* <div className={isDrawerOpen ? styles.drawerOpened : styles.drawerClosed}>
                     <div className={styles.drawerMenu}>
                         <div></div>
                         <button className={styles.menuButton} onClick={toggleDrawer}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width={24} height={24}>
@@ -49,7 +49,7 @@ export default function Header() {
                         <li className={styles.drawerListItem}>Contacts</li>
                         <li className={styles.drawerListItem}>About</li>
                     </ul>
-                </div>
+                </div> */}
 
             </header>
         </>

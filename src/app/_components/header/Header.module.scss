@@ -113,12 +113,17 @@
     // }
 }
 
+// .navList {
+//     display: flex;
+//     list-style-type: none;
+//     @media (max-width: $contentWidthMd) {
+//         display: none;
+//     }
+// }
+
 .navList {
     display: flex;
     list-style-type: none;
-    @media (max-width: $contentWidthMd) {
-        display: none;
-    }
 }
 
 .navButtonDiv {
