@@ -33,6 +33,7 @@ export async function GET(req: Request) {
         const info = (await prisma.aboutMe.findMany());
         return NextResponse.json(info[info.length - 1]);
     } catch (e) {
-        return NextResponse.json({ error: e })
+        console.log({ error: e })
+        return []
     }
 }

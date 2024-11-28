@@ -35,6 +35,7 @@ export async function GET(req: Request) {
         const users = await prisma.education.findMany();
         return NextResponse.json(users);
     } catch (e) {
-        return NextResponse.json({ error: e })
+        console.log({ error: e });
+        return [];
     }
 }
