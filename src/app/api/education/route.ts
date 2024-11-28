@@ -36,6 +36,6 @@ export async function GET(req: Request) {
         return NextResponse.json(users);
     } catch (e) {
         console.log({ error: e });
-        return [];
+        return NextResponse.json([]);
     }
 }

@@ -34,6 +34,6 @@ export async function GET(req: Request) {
         return NextResponse.json(info[info.length - 1]);
     } catch (e) {
         console.log({ error: e })
-        return []
+        return NextResponse.json([]);
     }
 }
