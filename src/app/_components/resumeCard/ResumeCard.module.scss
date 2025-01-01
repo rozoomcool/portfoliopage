@@ -99,6 +99,21 @@
     }
 }
 
+.contentTextSection {
+    // display: grid;
+    max-height: calc($cardHeight * 2 + 20px);
+    overflow-y: scroll;
+    width: 100%;
+    gap: 20px;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+
+    @media (max-width: $contentWidthMd) {
+        // display: grid;
+        // grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .infoText {
     width: 100%;
     padding-top: 16px;

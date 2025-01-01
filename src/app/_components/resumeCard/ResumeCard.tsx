@@ -84,11 +84,14 @@ export default function ResumeCard() {
     const infoSection = () => {
         return (
             <>
-                {/* <div className={styles.contentCardSection}> */}
-                <p className={styles.infoText}>My name is Rosul and i am a skilled full-stack and mobile developer with over 5 years of experience in building scalable, high-performance solutions. A finalist in the ICPC and a frequent participant in hackathons, where I have consistently demonstrated exceptional problem-solving abilities. My expertise includes developing Telegram bots, RESTful APIs, and cross-platform mobile applications using Flutter and Dart.</p>
-                <p className={styles.infoText}>I work with modern technologies such as JavaScript, TypeScript, Python, NestJS, Node.js, Express.js, and use Docker and Nginx for containerization and deployment. I am proficient in database management with PostgreSQL, MongoDB, and Redis.</p>
-                <p className={styles.infoText}>As a freelancer, I’ve delivered innovative, reliable solutions for a range of clients, balancing functionality, performance, and development efficiency. I’m always eager to take on complex challenges, improve my skills, and contribute to dynamic teams that value creativity and results-driven work.</p>
-                {/* </div> */}
+                <div className={styles.contentTextSection}>
+                <p className={styles.infoText}>My name is Rosul, and I am a developer with over 4 years of experience in software development. I specialize in mobile applications, web development, and backend solutions. My technical stack includes Java, Spring Boot, Flutter, Python, JavaScript, TypeScript, Node.js, React.js, as well as databases like Postgres, MongoDB, Redis, and RabbitMQ.</p>
+                <p className={styles.infoText}>I started programming at the age of 13, and my journey has been diverse. I began by working on websites and Telegram bots using Python and JavaScript. Over time, I expanded my skills and took on more complex projects. One of the most interesting challenges I’ve worked on was creating a market maker for the Solana blockchain. In this project, I was responsible for building a backend service that handled long-running tasks such as tracking, buying, selling, and other operations. I developed the service using NestJS.</p>
+                <p className={styles.infoText}>In addition to backend development, I have a strong foundation in frontend and mobile app development. I have spent considerable time learning Java, Spring, and Flutter, which allows me to tackle a variety of tasks—whether it’s building backend systems, creating user interfaces, or developing mobile applications. I’m always eager to learn new technologies and embrace new challenges.</p>
+                <p className={styles.infoText}>During my time at university, I was actively involved in ICPC competitions and hackathons, where my team consistently made it to the finals and earned prize positions. I also mentored younger students, helping them grow in programming and guiding them through difficult problems.</p>
+                <p className={styles.infoText}>Between the ages of 17 and 19, I spent two years working in the field of computer graphics (CG), which broadened my understanding of design and user experience. This experience has been invaluable, helping me build better interfaces and think more creatively in my development work.</p>
+                <p className={styles.infoText}>With over 4 years of experience, I am always looking for opportunities to grow, take on new challenges, and contribute to exciting projects. My diverse skill set allows me to approach problems from multiple angles, and I’m always ready to learn and adapt to new technologies.</p>
+                </div>
             </>
         );
     }
