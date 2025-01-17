@@ -23,13 +23,17 @@
     transition: 0.3s ease-in;
 
     &:hover,
-    &:focus {
+    &:checked {
         background-color: $primaryColor;
         color: white;
     }
 
     &:active {
-        pointer-events: none;
+        color: $primaryColor;
+        background-color: transparent;
+    }
+
+    &:active {
         background-color: transparent;
         color: $primaryColor;
     }
