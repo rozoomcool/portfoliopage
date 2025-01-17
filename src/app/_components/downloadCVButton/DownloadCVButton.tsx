@@ -5,10 +5,14 @@ import { useRef } from 'react';
 
 export default function DownloadCVButton() {
     const linkRef = useRef(null);
-	const handleClick = () => {
+	const handleClick = async () => {
+        // const response = await fetch('/api/cv');
+        // const blob = await response.blob();
+        // const url = window.URL.createObjectURL(blob);
         const url = "/api/cv";
         const link = linkRef.current as HTMLAnchorElement | null;
         link!.href = url;
+        // link.download = 'Umatke';
         link!.click();
         window.URL.revokeObjectURL(url);
       };
