@@ -59,7 +59,7 @@
     background-color: darken($surfaceColor, 1%);
     border-radius: 12px;
     z-index: -1;
-    filter: drop-shadow(0 0 5px rgb(42, 42, 42));
+    // filter: drop-shadow(0 0 5px rgb(42, 42, 42));
 
     &:hover {
         filter: drop-shadow(0 0 5px $primaryColor);

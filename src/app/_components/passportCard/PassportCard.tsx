@@ -1,6 +1,6 @@
 import styles from "./PassportCard.module.scss"
 import Image from "next/image"
-import avatar from "../../public/assets/mephoto3.jpeg"
+import avatar from "../../public/assets/mephoto.jpeg"
 import DownloadCVButton from "../downloadCVButton/DownloadCVButton";
 
 export default function PassportCard() {

@@ -18,7 +18,7 @@ export default function HomeScreen() {
                         </div>
                         <div className={styles.mainExpLine}>
                             <ExperienceLine data={[
-                                { title: "Years of experience", value: "3+" },
+                                { title: "Years of experience", value: "4+" },
                                 { title: "Self-completed projects", value: "20+" },
                                 { title: "Technologies mastered", value: "15" },
                                 { title: "I don't know", value: "500" }

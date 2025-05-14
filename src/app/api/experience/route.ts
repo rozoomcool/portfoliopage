@@ -37,6 +37,13 @@ export async function GET(req: Request) {
         return NextResponse.json(users);
     } catch (e) {
         console.log({ error: e });
-        return NextResponse.json([{ "id": 1, "title": "Telegram bot developer", "company": "Frilance, Project work", "term": "2021 - to date" }, { "id": 2, "title": "Fullstack Developer", "company": "Frilance, Project work", "term": "2020 - to date" }, { "id": 3, "title": "Flutter Developer", "company": "Frilance, Project work", "term": "2022 - to date" }]);
+        return NextResponse.json([
+            { "id": 1, "title": "Fullstack developer", "company": "Frilance, Project work", "term": "2020 - 2022" },
+            { "id": 2, "title": "Backend Developer", "company": "Gybernaty", "term": "2022 - 2023" },
+            { "id": 3, "title": "Fullstack Developer", "company": "TeckWizards", "term": "2023 - 2024" },
+            { "id": 4, "title": "Backend Developer", "company": "Dekit", "term": "2024 - to date" },
+            { "id": 5, "title": "Fullstack Developer", "company": "Clintly, cliently.me", "term": "2024 - to date" },
+
+        ]);
     }
 }
